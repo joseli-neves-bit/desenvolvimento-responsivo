@@ -1,68 +1,26 @@
 # desenvolvimento-responsivo
 Desenvolvimento Responsivo – Exercício de CSS
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvimento Responsivo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="bloco azul">
-      <h1>Desenvolvimento Responsivo</h1>
-    </div>
-    <div class="bloco vermelho">
-      <h1>Desenvolvimento Responsivo</h1>
-    </div>
-  </div>
-</body>
-</html>
-/* Reset básico */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+# Desenvolvimento Responsivo – Exercício de CSS
 
-/* Contêiner flexível */
-.container {
-  display: flex;
-  height: 100vh; /* ocupa toda a altura da tela */
-}
+Este projeto foi desenvolvido como parte da disciplina **Desenvolvimento Responsivo**.  
+O objetivo é criar uma página com dois blocos (azul e vermelho) que se ajustam responsivamente conforme o tamanho da tela.
 
-/* Blocos */
-.bloco {
-  flex: 1; /* cada bloco ocupa metade da tela */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+## Estrutura do projeto
+- `index.html` → Página principal com os blocos azul e vermelho
+- `style.css` → Folha de estilos responsável pela responsividade
+- `sobre.html` → Página extra (opcional)
 
-.azul {
-  background-color: blue;
-  color: white;
-}
+## Tecnologias utilizadas
+- HTML5
+- CSS3 (Flexbox + Media Queries)
 
-.vermelho {
-  background-color: red;
-  color: white;
-}
+## Como testar
+1. Abra o arquivo `index.html` em um navegador.
+2. Reduza o tamanho da janela para verificar a responsividade.
+3. Os blocos devem se ajustar de lado a lado em telas grandes e empilhar em telas menores.
 
-/* Texto */
-h1 {
-  font-size: 3vw; /* tamanho proporcional à largura da tela */
-  text-align: center;
-}
+## Resultado esperado
+- Experiência consistente em diferentes dispositivos.
+- Texto centralizado e legível.
+- Navegação intuitiva e acessível.
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* empilha os blocos */
-  }
-
-  h1 {
-    font-size: 6vw; /* aumenta proporcionalmente em telas menores */
-  }
-}
